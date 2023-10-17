@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Título</title>
+		<script>
+			alert("Olá turma!")
+
+			var nome = "Brenda"
+			console.log(" o nome é = " + nome)
+
+
+			function trocarClasse() { 
+				var fraseAtual = document.getElementById("frase")
+				fraseAtual.className = "h1_2";
+			}
+		</script>
+		<script  src="js/myscript.js"></script>
+		<link rel="stylesheet" href="css/asset.css">
+	</head>  
+	
+	<body>
+		<h1 id="frase"  class="h1_1"
+			ondblclick="trocarFrase()"
+			onmouseover="trocarClasse()">oii gentee</h1>
+
+			<input id="novaFrase" type="text"><br>
+       		<input id="botao" type="button" 
+			value="Trocar Frase"
+			onclick="trocarTexto()"><br>
+
+		</body>
+</html>
