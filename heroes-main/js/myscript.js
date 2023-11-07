@@ -12,9 +12,9 @@ function mudarFrase() {
 function trocarTexto(){
     var elemento = document.getElementById("frase")
     var nova = document.getElementById("novaFrase").value
-elemento.innerHTML = nova
+    elemento.innerHTML = nova
 }
 
-function gabi(id){
-    return document.getElementsBy(Id)
+function gebi(id){
+    return document.getElementById(id)
 }
