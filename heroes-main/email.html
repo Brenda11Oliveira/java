@@ -1,57 +1,100 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-    <title>Email</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email</title>
     <script>
-        //chamar no evento onsubmit do form
         function validarEmail() {
             var email = document.getElementById("idEmail").value
             if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
                 alert("Email inválido")
-                return false
-            }else{
-                return true
+                return
             }
         }
-</script>
+    </script>
 </head>
 
 <body>
+    Está com dúvidas? <br>
+    <a href="mailto:willianmoreira0510@gmail.com?
+    &subject=Assundo do Email
+    &cc=copia@provedor.com.br
+    &bcc=copiaoculta@provedor.com.br
+    &body=Olá galera!">Enviar email</a> <br>
+    <a href="https://wa.me/554999999999?
+    text=mensagem%20de%20hoje">WhatsApp</a><br>
+    <br>
+    <form id="idForm" onsubmit="return validarEmail" 
+    action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST">
 
-    Está com dúvidas?
-    <a href="mailto:email@provedor.com.br?
-        &subject=Assunto do email
-        &cc=copia@provedor.com.br
-        &bcc=copiaoculta@provedor.com.br
-        &body=Olá gaelra">Enviar Email
-    </a>
+    <br><label for="nome">Nome:</label><br>
 
-    <a href="https://wa.me/5548999999999?
-        text=mensagem%20de%20hoje">
+    <input type="text" name="nome" id="idnome" 
+    minlength="5" maxlength="12" 
+    pattern="[a-z]{5,12}" required><br><br>
+    <label for="email">E-mail:</label><br>
 
-        WhatsApp:
+        <input placeholder="nada@nada.com" type="email" 
+        onblur="validarEmail()" 
+        name="email" id="email" required><br>
 
-    </a><br>
+
+       <br> <textarea placeholder="O texto do seu e-mail" 
+        name="texto" id="idtexto" cols="30" rows="6"
+        required></textarea><br>
+
+     
+
+        <br><label for="nome">CPF:</label><br>
     
-    <form id="idForm" action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST">
-
-        Email:
-
-        <input
-        placeholder="nada@nada.com"
-        title="Um email válido" 
-        type="email"name="email"
-        id="idEmail"required><br>
-
-        Nome:
-        
-        <input type="text"
-        name="nome" id="idNome" required><br>
-        <textarea name="nome" cols="25" rows="3"
-        placeholder="o texto do seu e-mail" required></textarea>
-        <input type="submit" value="Enviar"/>
-
+        <input type="text" name="CPF" id="idCPF" 
+        maxlength="11"  minlength="11"
+        pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" 
+        title="Digite seu CPF" required
+        pattern="[0-9]{11}"
+        textarea placeholder="999.999.999-99" ><br>
       
-    </form>
+     
 
+     <br> <label for="nome">CEP:
+        </label><br>
+
+        <input name="cep" 
+        minlength="8" maxlength="8" 
+        pattern="/d{5}-/d{3}"
+        title="Adcione seu CEP" 
+        input placeholder=" xxxxx-xxx"><br>
+
+        <br><label for="nome">Número:</label><br>
+
+        <input name="numero" id="idnome" 
+        minlength="14" maxlength="14" 
+        title="Seu numero"
+        pattern="(/d{2})/d{5}-\d{4}"
+        input placeholder=" (xx) xxxxx-xxxx"
+         required><br><br>
+
+         <br><label for="nome">Data:</label><br>
+
+        <input type="date" name="numero" id="iddata" 
+ 
+        title="Sua data"
+       
+         required><br><br>
+
+         <br><label for="nome">Hora:</label><br>
+
+        <input type="time"  name="numero" id="idhora" 
+
+        title="Sua hora"
+      
+         required><br><br>
+
+       <input type="submit" value="Enviar">
+
+    </form>
 </body>
+
 </html>
