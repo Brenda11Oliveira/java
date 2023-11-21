@@ -6,19 +6,32 @@
     <title>Repete</title>
     <script>
         function Contar(){
+//                      0        1        2       3      4       5
 
-            var cars = [ "jetta", "gol", "amarok" ];
-             var novoCarro = prompt("Diga um carro")
-             cars.push(novoCarro)
-             console.table(cars)
+            var a = [ "José", "Maria", "Ana", "joana", "Bento", "Carine" ];
 
-             for (
-                let index = 0; index < cars.length; index++) {
 
-                const car = cars [index];
-                document.write(car + "<br>")
+             for ( let index = 0; index < a.length; index++) {
+                 const element = a[index]
+
+                if(element == "Ana"){
+                    document.write("casinha " + index + " tem " + element + "<br>")
+                    break
                 
+                }
+             
              }
+ 
+             var quem = prompt("Diga um nome")
+             var ondeEsta = a.indexOF(quem )
+              if(ondeEsta != -1){
+                document.write("casinha:" + ondeEsta + " tem" + element + "<br>") 
+                a.splice(ondeEsta,1)
+
+             }else{
+                document.write("não achei: " + quem +"<br>") 
+             }
+             document.write("alterado = " + a)
         }
     
         
