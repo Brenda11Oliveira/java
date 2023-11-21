@@ -1,15 +1,29 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
     <title>Repete</title>
     <script>
         function Contar(){
-            for (var i = 0; i < 50; i=i+2){
-                document.write (i + "<br>")
-            }
+
+            var cars = [ "jetta", "gol", "amarok" ];
+             var novoCarro = prompt("Diga um carro")
+             cars.push(novoCarro)
+             console.table(cars)
+
+             for (
+                let index = 0; index < cars.length; index++) {
+
+                const car = cars [index];
+                document.write(car + "<br>")
+                
+             }
         }
-    </script>
+    
+        
+    </script> 
+
 </head>
 <body>
         <input type="button" value="Enviar" onclick="Contar()">
